@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+</head>
+<body>
+    <header class="header">
+      <a href="index.html">
+        <img class="header__logo" src="images/logo.png" alt="Логотип">
+      </a>
+        <div class="header__buttons">
+          <a class="main__button" href="index.html">Главная</a>
+          <a class="main__button" href="#teachers">Преподаватели</a>
+          <a class="main__button" href="#review">Отзывы</a>
+          <a class="main__button" href="catalog.html">Каталог</a>
+      <a class="main__button" href="registr.html">Вход</a>
+          <button id="openSettings">Настройки</button>
+        </div>
+      </header>
+      <main class="catalog-page">
+        <div class="search">
+          <input type="text" placeholder="Профессия или направление" />
+        </div>
+      
+  
+ <section class="section filter_card">
+  <!-- Кнопки фильтров -->
+  <div class="filter-buttons">
+    <button class="filter-button" data-filter="all">Все</button>
+    <button class="filter-button" data-filter="graphic">Графический дизайн</button>
+    <button class="filter-button" data-filter="web">Веб-дизайн</button>
+    <button class="filter-button" data-filter="space">Дизайн пространства</button>
+    <button class="filter-button" data-filter="industrial">Промышленный дизайн</button>
+  </div>
+
+  <!-- Карточки -->
+  <ul class="card_list">
+    <li class="card_item" data-category="graphic">
+      <h3 class="card_title">Графический дизайн</h3>
+      <p class="card_description"><span class="keep-light">Раскрась мир бренда яркими красками!</span></p>
+    </li>
+    <li class="card_item" data-category="web">
+      <h3 class="card_title">Веб-дизайн</h3>
+      <p class="card_description"><span class="keep-light">Создай сайт, который влюбляет с первого клика!</span></p>
+    </li>
+    <li class="card_item" data-category="space">
+      <h3 class="card_title">Дизайн интерьеров</h3>
+      <p class="card_description"><span class="keep-light">Привнеси уют и стиль в любое пространство!</span></p>
+    </li>
+    <li class="card_item" data-category="web">
+      <h3 class="card_title">UX/UI-дизайн</h3><p class="card_description">
+        <span class="keep-light">Делай интерфейсы, которыми хочется пользоваться снова и снова!</span></p>
+      </li>
+      <li class="card_item" data-category="industrial">
+        <h3 class="card_title">3D-визуализация</h3>
+        <p class="card_description"><span class="keep-light">Покажи миру, каким он станет завтра!</span></p>
+      </li>
+      <li class="card_item" data-category="industrial">
+        <h3 class="card_title">Дизайн одежды</h3>
+        <p class="card_description"><span class="keep-light">Создавай моду, которая вдохновит весь мир!</span></p>
+      </li>
+      <li class="card_item" data-category="graphic">
+        <h3 class="card_title">Коммуникационный дизайн</h3>
+        <p class="card_description"><span class="keep-light">Говори громко и ясно своим дизайном!</span></p>
+      </li>
+      <li class="card_item" data-category="industrial"><h3 class="card_title">Гейм-дизайн</h3>
+        <p class="card_description"><span class="keep-light">Создай игру, в которую невозможно перестать играть!</span></p>
+      </li>
+      <li class="card_item" data-category="space">
+        <h3 class="card_title">Ландшафтный дизайн</h3>
+        <p class="card_description"><span class="keep-light">Сделай окружающий мир красивым и комфортным!</span></p>
+      </li>
+      <li class="card_item" data-category="industrial">
+        <h3 class="card_title">Промышленный дизайн</h3>
+        <p class="card_description"><span class="keep-light">Изучите, как проектировать удобные и интуитивные интерфейсы!</span></p>
+      </li>
+      <li class="card_item" data-category="graphic">
+        <h3 class="card_title">Моушен-дизайн</h3>
+        <p class="card_description"><span class="keep-light">Оживи картинку, удиви зрителя!</span></p>
+      </li>
+      <li class="card_item" data-category="web">
+        <h3 class="card_title">Типографика</h3>
+        <p class="card_description"><span class="keep-light">Сделай шрифты голосом, который услышат все!</span></p>
+      </li>
+
+  </ul>
+</section>
+
+
+  <!-- Всплывающее окно -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-content">
+      <span class="popup-close" id="popupClose"><i class="fas fa-times"></i></span>
+      <h4 id="popupCourseTitle">Запишитесь или получите консультацию</h4>
+      <form id="popupForm">
+        <div class="form-group">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required placeholder="Ваше имя">
+        </div>
+        <div class="form-group">
+          <label for="email">Почта:</label>
+          <input type="email" id="email" name="email" required placeholder="Ваш email">
+        </div>
+        <div class="button-group">
+          <button type="submit" class="popup-button primary" data-action="записаться">Записаться на курс</button>
+        <button type="submit" class="popup-button secondary" data-action="получить_консультацию">Получить консультацию</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+   <!-- Всплывающее окно (успех) -->
+  <div class="popup-overlay success-popup" id="successPopup">
+    <div class="popup-content">
+      <span class="popup-close" id="successPopupClose"><i class="fas fa-times"></i></span>
+      <h1>Вы успешно подали заявку!</h1>
+      <p class="popup-description">Мы свяжемся с вами в ближайшее время.</p>
+    </div>
+  </div>
+
+
+
+    <div class="settings-overlay" id="settingsOverlay">
+    <div class="settings-panel">
+      <h2>Настройки</h2>
+      <div class="setting">
+        <label for="themeSelect">Выбор темы:</label>
+        <select id="themeSelect">
+          <option value="light">Светлая</option>
+          <option value="dark">Темная</option>
+        </select>
+      </div>
+      <button id="closeSettings">Закрыть</button>
+    </div>
+  </div>
+
+<button id="scrollToTopBtn" aria-label="Вверх">
+  <i class="fas fa-arrow-up"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></i> 
+</button>
+      </main>       
+    
+
+        <footer class="footer_container">
+        <div class="footer__content">   
+
+            <p style="text-decoration: none;color:#efefef;">Информация о нас</p>
+            <p style="text-decoration: none;color:#efefef;">делали: Анна Молотова, Диана Семенова, Мария Максимова</p>
+            <p style="text-decoration: none;color:#efefef;">Email: ghhfssk@gmail.com </p>
+            <p style="text-decoration: none;color:#efefef;">Телефон: +7(321)-454-63-66</p>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.513759978903!2d37.59094328578756!3d55.733328000792765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a6595072101%3A0xc68826c92c9af7a0!2z0JzQvtCy0L7RgdC60L7QuSDQnNCw0YDRg9C70LAg0YPQuy4sIDMsINCc0L7RgdC_0YvRjNC60LDRjyDQvtC00L3QuNC10L3QuNGP!5e0!3m2!1sru!2sru!4v1718652424687!5m2!1sru!2sru">
+            </iframe>
+        </div>
+        </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+
+</html>
+
