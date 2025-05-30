@@ -1,0 +1,33 @@
+body {
+    background-color: #ffffff;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 1000px;
+    scroll-behavior: smooth;
+    font-family: 'TTNorms',Arial, sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+  /* Мобильная версия для разделов */
+  .section_letter {
+    margin-top: 5%;
+  }
+  
+
+  h4 {
+    font-family: 'TTNorms',Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }

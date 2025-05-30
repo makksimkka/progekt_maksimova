@@ -1,0 +1,640 @@
+/* ============================== */
+/* Общие стили для всего сайта    */
+/* ============================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'TTNorms',Arial, sans-serif;
+  }
+
+  /* ============================== */
+  /* Основной контейнер для центрирования */
+  /* ============================== */
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ============================== */
+  /* Заголовки                        */
+  /* ============================== */
+  
+  
+  h1 {
+    font-family: 'TTNorms',Arial, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #771011;
+  }
+  
+  h2 { /*от записи*/
+    font-family: 'TTNorms',Arial, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    
+  }
+  
+ 
+  
+  /* ============================== */
+  /* Основной контент                 */
+  /* ============================== */
+
+/* Контейнер для текста и изображения */
+.promo_content {
+  display: flex;
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: space-between; /* Текст слева, изображение справа */
+  padding: 0px;
+}
+
+/* Текстовый блок */
+.promo__text {
+  flex: 4; /* Занимает больше места */
+  padding-right: 40px; /* Отступ справа */
+}
+
+/* Заголовок */
+.promo__title {
+  font-size: 4.5em;
+  font-weight: 800;
+color: #771011;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+/* Описание */
+.promo__description {
+  font-size: 1.3em;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Фото */
+.promo__photo {
+  flex: 4; /* Занимает меньше места */
+  border-radius: 40px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+/* Изображение */
+.promo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Заполняем контейнер, обрезая */
+  display: block;
+}
+
+
+
+/* Адаптивность */
+@media (max-width: 992px) {
+  .promo_content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+  }
+
+  .promo__text {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .promo__photo {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .promo__title {
+    font-size: 4em;
+  }
+
+  .promo__description {
+    font-size: 1.2em;
+  }
+}
+
+
+  
+  /* ============================== */
+  /* Раздел графический дизайн        */
+  /* ============================== */
+#design {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Ограничиваем ширину секции */
+  margin: 30px auto;
+  text-align: center;
+}
+
+.design_container {
+  overflow: hidden; /* Скрываем элементы, выходящие за границы */
+}
+
+.design_list {
+  display: flex;       /* Выстраиваем элементы в горизонтальную линию */
+   margin-bottom: 50px; /* Добавляем отступ снизу */
+  transition: transform 0.5s ease-in-out; /* Плавная анимация */
+}
+
+.design_item {
+  flex: 0 0 100%;    /* Каждый элемент занимает 100% видимой области */
+  box-sizing: border-box; /* Учитываем padding и border в ширине */
+  display: flex;       /* Картинка и текст в одной строке */
+  align-items: center; /* Выравнивание по вертикали */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 0;          /* Убираем отступы между элементами */
+}
+
+.design_image {
+  width: 50%;
+  max-width: 600px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover; /* Обрезаем изображение, чтобы оно занимало всю область */
+}
+
+.design_text {
+  width: 60%;
+  text-align: left;
+  
+}
+
+.design_title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #771011;
+}
+
+.design__description {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Кнопки */
+.design_prev,
+.design_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.design_prev {
+  left: 10px;
+}
+
+.design_next {
+  right: 10px;
+}
+
+.design_prev:hover,
+.design_next:hover {
+  background-color: #ddd;
+}
+
+
+  /* ============================== */
+  /* Блок преподавателей             */
+  /* ============================== */
+  
+/* Общие стили секции преподавателей */
+.section.teacher {
+  margin-top: 20px;
+  font-family: 'TTNorm', sans-serif; /*  Пример шрифта */
+}
+
+/* Заголовок секции */
+.section_title {
+  font-size: 2.8em;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Список преподавателей */
+.teacher__list {
+  display: flex;                /*  Горизонтальное расположение элементов */
+  list-style: none;             /*  Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+   margin-bottom: 50px; /* Добавляем отступ снизу */
+  justify-content: center;     /*  Располагаем элементы по центру */
+}
+
+/* Элемент списка (преподаватель) */
+.teacher__item {
+  margin: 0 10px;               /* Отступы слева и справа */
+
+  text-align: center;           /*  Выравниваем текст по центру */
+  position: relative;           /*  Для позиционирования текста */
+  width: 900px;                 /*  Задаем ширину (можно изменить) */
+  height: 300px;                /*  Задаем высоту (можно изменить) */
+}
+
+/* Контейнер для фото */
+.teacher__photo {
+  width: 250px;                   /*  На всю ширину */
+  height: 250px;                   /*  На всю высоту */
+  overflow: hidden;               /*  Скрываем выступающие части */
+  position: relative;           /*  Относительное позиционирование */
+  border-radius: 8px;
+}
+
+/* Изображение */
+.teacher__image {
+  width:250px;                   /*  Ширина 100% */
+  height:250px;                   /*  Высота 100% */
+  object-fit: cover;            /*  Заполнение контейнера с обрезкой */
+  transition: opacity 0.3s ease; /*  Плавное появление/исчезновение */
+  display: block; 
+    border-radius: 8px;               /*  Убираем отступы снизу у картинок */
+}
+
+/* Заголовок (имя преподавателя) */
+.teacher__title {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #333;
+
+}
+
+/* Описание (скрыто по умолчанию) */
+.teacher__description {
+  position: absolute;           /*  Абсолютное позиционирование */
+  top: 0;                       /*  Вверх */
+  left: 0;                      /*  Влево */
+  width: 100%;                   /*  На всю ширину */
+  height: 100%;                   /*  На всю высоту */
+  background-color: #771012b0; /*  Затемнение */
+  color: white;                /*  Белый текст */
+  display: flex;               /*  Flexbox для центрирования */
+  justify-content: center;    /*  Центрируем по горизонтали */
+  align-items: center;         /*  Центрируем по вертикали */
+  opacity: 0;                 /*  Скрываем */
+  transition: opacity 0.3s ease; /*  Плавное появление */
+  box-sizing: border-box;      /*  Включаем padding в размер */
+  padding: 10px;               /*  Отступы текста */
+  text-align: center;           /*  Текст по центру */
+  font-size: 0.9em;             /*  Размер текста */
+  border-radius: 8px;
+}
+  
+  /* ============================== */
+  /* Блок отзывов                     */
+  /* ============================== */
+  
+/* Общие стили для секции отзывов */
+.section.review {
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.section_title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Контейнер слайдера */
+.review-slider {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Список отзывов */
+.review__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
+  scroll-snap-type: none; /* Отключаем привязку прокрутки */
+
+}
+
+/* Элемент отзыва */
+.review__item {
+  flex: 0 0 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: left;
+  box-sizing: border-box;
+  min-width: 300px;
+  margin-right: 0;
+  scroll-snap-align: start;
+}
+
+.review__title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.review__description p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Стили для кнопок управления слайдером */
+.review_prev,
+.review_next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%; /* расположение кнопок*/
+  transform: translateY(-50%);
+  z-index: 10;
+  line-height: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.review_prev:hover,
+.review_next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.review_prev {
+  left: 0;
+}
+
+.review_next {
+  right: 0;
+}
+
+/* Кнопка "Добавить отзыв" */
+.add-review-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #771011;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  width: fit-content;
+   margin-bottom: 80px; /* Добавляем отступ снизу */
+}
+
+.add-review-btn:hover {
+  background-color: #5c1415;
+}
+
+
+
+  /* ============================== */
+  /* смена темы сайта */
+  /* ============================== */
+
+
+/* Общие стили */
+body {
+  font-family:  "TTNorm", sans-serif;
+  transition: background-color 0.3s, color 0.3s; /* Плавная смена */
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Светлая тема  */
+.light-theme { 
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Темная тема */
+.dark-theme { 
+  background-color: #222;
+  color: #ffffff;
+}
+
+/* Темная тема для текста, который должен оставаться светлым */
+.dark-theme .keep-light {
+    color: #fff; /* Белый цвет остается белым в темной теме */
+}
+
+
+/* Стили для текста, который должен оставаться темным на светлой теме */
+.keep-dark {
+    color: #333; /* Темный цвет по умолчанию */
+}
+
+/* Светлая тема для текста, который должен оставаться темным */
+.light-theme .keep-dark {
+    color: #333;  /* Темный цвет остается темным в светлой теме */
+}
+
+/*  Цвет заголовков (h1, h2, h3, ...) по умолчанию - темный  */
+h1, h5, h6 {
+    color: #333;  /* Темный цвет  по умолчанию */
+}
+
+/*  В темной теме, меняем цвет заголовков на светлый  */
+
+.dark-theme h2,
+
+.dark-theme h5,
+.dark-theme h6 {
+    color: #eee;  /* Светлый цвет в темной теме */
+}
+
+
+/* Скрываем наложение по умолчанию */
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
+  display: none; /* Скрыто */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Поверх всего контента */
+}
+
+/* Показываем наложение при добавлении класса 'active' */
+.settings-overlay.active {
+  display: flex;
+}
+
+/* Панель настроек */
+.settings-panel {
+  background-color: #fff; /* Светлый фон по умолчанию */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: left;
+}
+
+
+/* Темная тема для панели настроек  */
+.dark-theme .settings-panel {   
+  background-color: #333; /* Темный фон */
+  color: #fff; /* Светлый текст */
+}
+
+
+/* Название настроек */
+.settings-panel h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.dark-theme .settings-panel h2 {  /*  <-- ВАЖНО! (dark-theme применяется к body) */
+  color: #fff; /* Светлый цвет в темной теме */
+}
+
+/* Настройка */
+.setting {
+  margin-bottom: 15px;
+}
+
+.setting label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Выпадающий список */
+#themeSelect {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+/* Кнопка закрытия */
+#closeSettings {
+  padding: 10px 15px;
+  background-color: #771011;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#closeSettings:hover {
+  background-color: #4d0a0b;
+}
+
+
+
+  /* ============================== */
+  /* скрол*/
+  /* ============================== */
+
+#scrollToTopBtn {
+  display: none; /* Скрываем кнопку при загрузке страницы */
+  position: fixed; /* Фиксированное положение на экране */
+  bottom: 20px;    /* Отступ от нижнего края */
+  right: 20px;     /* Отступ от правого края */
+  background-color: #771012b3; /* Полупрозрачный фон */
+  color: white;         /* Белый цвет текста/иконки */
+  border: none;          /* Убираем обводку */
+  border-radius: 5px;    /* Скругленные углы */
+  padding: 10px 15px;   /* Внутренние отступы */
+  cursor: pointer;       /* Курсор в виде руки */
+  opacity: 0;          /* Изначально невидима */
+  transition: opacity 0.3s ease; /* Плавное появление */
+  z-index: 1000;         /* Убедитесь, что кнопка поверх других элементов */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #771011; /* Более темный фон при наведении */
+}
+
+#scrollToTopBtn.show {
+  display: block; /* Показываем кнопку */
+  opacity: 1;       /* Делаем видимой */
+}
+
+/* Стили для иконки (если используется Font Awesome или подобное) */
+#scrollToTopBtn i {
+  font-size: 1.5em; /* Размер иконки */
+}
+
+
+
+
+
+  /* ============================== */
+  /* загрузчик экрана*/
+  /* ============================== */
+
+/* Стили для прелоадера */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9; /* Светлый фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Поверх всего остального контента */
+  transition: opacity 0.5s ease-in-out; /* Для плавного исчезновения */
+}
+
+/* Стили для индикатора загрузки (крутящийся спиннер) */
+.loader {
+  border: 8px solid #f3f3f3; /* Светло-серый круг */
+  border-top: 8px solid #771011; /* цвет для верхней части */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite; /* Анимация вращения */
+}
+
+/* Анимация вращения */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Добавляем стили для скрытия контента во время загрузки (опционально) */
+body.loading .content {
+    display: none;
+}

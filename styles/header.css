@@ -1,0 +1,93 @@
+.header {
+  background-color: #771012f0; /* Цвет фона шапки */
+  padding: 0px 120px;       /* Внутренние отступы снизу/сверху и справа/слева */
+  position: sticky;          /* Фиксация при прокрутке */
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between; /* Распределение элементов по краям */
+  align-items: center;
+  column-gap: 80px;             /* Расстояние между элементами в колонке (при необходимости) */
+  width: 1200;
+  box-shadow: 0 2px 8px #5a1516; /* Легкая тень */
+  animation: show-header 0.8s ease-out forwards; /* Анимация появления */
+  margin: 0 auto; 
+  border-radius: 15px;
+}
+
+/* Логотип */
+.header__logo {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.header__logo:hover {
+  transform: scale(1.1); /* Немного увеличивается при наведении */
+}
+
+/* Контейнер кнопок */
+.header__buttons {
+  display: flex;
+  gap: 15px; /* Расстояние между кнопками */
+}
+
+/* Стиль для кнопок меню и кнопки настроек */
+.main__button,
+#openSettings {
+  text-decoration: none;
+  color: #fff; /* Цвет текста */
+  padding: 10px 20px;
+  background-color: transparent; /* Без цвета фона по умолчанию */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0); /* Добавляем границу */
+  cursor: pointer; /* Добавляем курсор указателя */
+}
+
+.main__button:hover,
+#openSettings:hover {
+  background-color: #771011; /* При наведении */
+  border-color: #51141500; /* При наведении меняем цвет границы */
+}
+
+/* ============================== */
+/* Стиль иконки логина         */
+/* ============================== */
+
+.header__login::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  will-change: transform;
+  transition: transform 0.4s ease-out;
+}
+
+.header__login:hover::before,
+.header__login:focus::before {
+  transform: scale(1.1);
+}
+
+/* ============================== */
+/* Адаптивность и дополнительные   */
+/* ============================== */
+
+@media(max-width: 768px) {
+  /* Можно переопределить стили для мобильных устройств */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .header__buttons {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+

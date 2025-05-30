@@ -1,0 +1,92 @@
+/* Основные стили для страницы регистрации */
+.registration_page {
+  padding: 20px; /* Добавляем немного отступов */
+  font-family: sans-serif;
+  color: #333;
+}
+
+/* Контейнер формы */
+.container_registr {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Логотип */
+.logo {
+  width: 200px;  /* Уменьшаем размер логотипа */
+  height: auto;  /* Автоматическая высота, чтобы сохранить пропорции */
+  display: block;
+  margin: 0 auto 20px; /* Отступ снизу */
+  object-fit: contain; /* Масштабируем изображение */
+  cursor: pointer; /* Указатель при наведении */
+}
+
+/* Ссылка вокруг логотипа */
+.logo_container a {
+  text-decoration: none; /* Убираем подчеркивание ссылки */
+}
+
+/* Заголовок страницы */
+.page_title {
+  margin-bottom: 20px;
+  font-size: 1.5em; /* Увеличиваем размер шрифта */
+  color: #771011;
+}
+
+/* Форма */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Растягиваем элементы на всю ширину */
+}
+
+/* Поля ввода */
+.form_input {
+  padding: 10px;
+  margin-bottom: 15px; /* Увеличиваем отступ снизу */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form_input:focus {
+  outline: none;
+  border-color: #771011;
+}
+
+/* Кнопка */
+.form_button {
+  padding: 12px;  /* Увеличиваем размер кнопки */
+  border: none;
+  border-radius: 4px;
+  background-color: #771011;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px; /* Увеличиваем размер шрифта */
+}
+
+.form_button:hover {
+  background-color: #55100f;
+}
+
+/* Ссылка внизу формы */
+.form_link {
+  margin-top: 20px; /* Увеличиваем отступ сверху */
+}
+
+
+@media (max-width: 600px) {
+    .registration-page .form {
+        width: 95%; /* Ширина формы на маленьких экранах */
+    }
+}
+
+
+
+

@@ -1,0 +1,33 @@
+
+
+  .footer_container {
+    width: 1200px;
+    margin: 0 auto; 
+    display: flex; /* гибкое расположение элементов */
+    align-items: center; /* вертикальное выравнивание по центру */
+    justify-content: space-between; 
+    padding: 20px; /* внутренние отступы */
+    background-color: #fff; /* фоновый цвет, измените по необходимости */
+    min-height: 100px; /* минимальная высота для обеих секций */
+    box-sizing: border-box; /* учитывает паддинги и бордеры при высоте */
+   border-radius: 15px;
+  }
+
+  .footer_container {
+    /* Можно оставить, как есть, или задать конкретную высоту */
+    min-height: 100px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #771011; /* пример фона, измените по стилю */
+    color: #ffffff;
+  }
+
+  .footer__content{
+    width: 1200px;
+    margin: 0 auto; 
+}
+
+  .map {
+    width: 80% ;
+    height: 350px;
+}
